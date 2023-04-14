@@ -6,7 +6,9 @@
     <br>
     <br>
     <p>A mod for Modern Warfare Remastered that allows you to use any viewhand, anywhere.</p>
-    <p style="font-size: 12px; color: gray;">NOT YET RELEASED</p>
+    <div style="font-size: 12px; color: gray;">
+        <p>NOT YET RELEASED</p>
+    </div>
 </div>
 
 <hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
@@ -34,15 +36,19 @@
 
 2. Install [H1-Mod](https://github.com/h1-mod/h1-mod/releases).
 
-3. Download the latest [Release](https://github.com/ToothyJarl/Global-Viewhands/releases/tag/1.0) or run [Global-Viewhands-Install.bat](https://github.com/ToothyJarl/Global-Viewhands/releases/tag/1.0) to automatically install.
+## Batch Installation
 
-4. If you used **Global-Viewhands-Install.bat**, skip the following steps.
+1. Download [Global-Viewhands-Install.bat](https://github.com/ToothyJarl/Global-Viewhands/releases/tag/1.0) and run it to automatically install.
 
-5. Create a folder in your MWR root directory called h1-mod if it is not already there.
+## Manual Installation
 
-6. Extract **Global-Viewhands.zip** into the h1-mod folder.
+1. Download [Global-Viewhands.zip](https://github.com/ToothyJarl/Global-Viewhands/releases/tag/1.0).
 
-7. Restart your game, and you have successfully installed **Global-Viewhands**!
+1. Create a folder in your MWR root directory called h1-mod if it is not already there.
+
+2. Extract **Global-Viewhands.zip** into the h1-mod folder.
+
+Restart your game, and you have successfully installed **Global-Viewhands**!
 
 
 <p style="font-size: 12px; color: gray;">If you have any problems installing, please contact <a href="https://discordapp.com/users/528791966503403541">ToothyJarl#2746</a>.</p>
