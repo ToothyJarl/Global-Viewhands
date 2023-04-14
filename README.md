@@ -4,6 +4,8 @@
     <img src="https://img.shields.io/github/commit-activity/w/ToothyJarl/Global-Viewhands?color=%23000000">
     <img src="https://img.shields.io/github/stars/ToothyJarl/Global-Viewhands?color=%23000000">
 
+    <br>
+
     A mod for Modern Warfare Remastered that allows you to use any viewhand, anywhere.
 </div>
 
