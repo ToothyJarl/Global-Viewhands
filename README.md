@@ -6,7 +6,9 @@
     <br>
     <br>
     <p>A mod for Modern Warfare Remastered that allows you to use any viewhand, anywhere.</p>
-    ##### <span style="color: gray; font-size: 12px;">NOT YET RELEASED</span>
+    <div style="font-size: 12px; color: gray;">
+        <p>NOT YET RELEASED</p>
+    </div>
 </div>
 
 <hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
@@ -56,7 +58,7 @@ Using Global Viewhands is extremely easy.
 <div align="center">
     <p style="font-size: 14px; color: gray;">Preview of a few viewhands</p>
     <br>
-    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/ghillie-viewhand.png"></img>
-    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/arctic-viewhand.png"></img>
-    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/black-kit-wet-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/ghillie-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/arctic-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/black-kit-wet-viewhand.png"></img>
 </div>
