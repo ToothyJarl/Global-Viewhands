@@ -1,6 +1,6 @@
 <img src="readme/header.png" width="100%" height="100%" />
 
-<div style="text-align: center;">
+<div align="center">
     <img src="https://img.shields.io/github/commit-activity/w/ToothyJarl/Global-Viewhands?color=%27000000"><br>
     <img src="https://img.shields.io/github/stars/ToothyJarl/Global-Viewhands?color=%23000000">
     <br>
@@ -62,7 +62,7 @@ Using Global Viewhands is extremely easy.
 <div align="center">
     <p style="font-size: 14px; color: gray;">Preview of a few viewhands</p>
     <br>
-    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/ghillie-viewhand.png"></img>
-    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/arctic-viewhand.png"></img>
-    <img style="border-radius: 15px; display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/black-kit-wet-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/ghillie-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/arctic-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/black-kit-wet-viewhand.png"></img>
 </div>
