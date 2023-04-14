@@ -6,9 +6,7 @@
     <br>
     <br>
     <p>A mod for Modern Warfare Remastered that allows you to use any viewhand, anywhere.</p>
-    <div style="font-size: 12px; color: gray;">
-        <p>NOT YET RELEASED</p>
-    </div>
+    ##### <span style="color: gray; font-size: 12px;">NOT YET RELEASED</span>
 </div>
 
 <hr style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;" noshade="" size="20" width="100%">
