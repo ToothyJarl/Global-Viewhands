@@ -1,4 +1,4 @@
-<img src=".git/readme/header.png" width="100%" height="100%" />
+<img src="readme/header.png" width="100%" height="100%" />
 
 <div align="center">
     <img src="https://img.shields.io/github/commit-activity/w/ToothyJarl/Global-Viewhands?color=%23000000">
@@ -13,4 +13,4 @@
 
 Coming soon...
 
-<img src=".git/readme/footer.png" width="100%" height="100%" />
+<img src="readme/footer.png" width="100%" height="100%" />
