@@ -38,7 +38,7 @@
 
 ## Batch Installation
 
-1. Download <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ToothyJarl/Global-Viewhands/raw/main/Global-Viewhands-Install.bat" target="_blank">Global-Viewhands-Install.bat</a> and run it to automatically install.
+1. Download <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ToothyJarl/Global-Viewhands/raw/main/Global-Viewhands-Install.bat" target="_blank" target="_blank">Global-Viewhands-Install.bat</a> and run it to automatically install.
 
 ## Manual Installation
 
