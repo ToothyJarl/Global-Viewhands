@@ -1,4 +1,4 @@
-<img src="readme/header.png" width="100%" height="100%" />
+<img src="github/header.png" width="100%" height="100%" />
 
 <div align="center">
     <img src="https://img.shields.io/github/commit-activity/w/ToothyJarl/Global-Viewhands?color=%27000000"><br>
@@ -44,9 +44,9 @@
 
 1. Download [Global-Viewhands.zip](https://github.com/ToothyJarl/Global-Viewhands/releases/tag/1.0).
 
-1. Create a folder in your MWR root directory called h1-mod if it is not already there.
+1. Create a folder in your MWR root directory called **mods** if it is not already there.
 
-2. Extract **Global-Viewhands.zip** into the h1-mod folder.
+2. Extract **Global-Viewhands.zip** into the **mods** folder.
 
 Restart your game, and you have successfully installed **Global-Viewhands**!
 
@@ -62,7 +62,7 @@ Using Global Viewhands is extremely easy.
 <div align="center">
     <p style="font-size: 14px; color: gray;">Preview of a few viewhands</p>
     <br>
-    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/ghillie-viewhand.png"></img>
-    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/arctic-viewhand.png"></img>
-    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="readme/black-kit-wet-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/ghillie-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/arctic-viewhand.png"></img>
+    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/black-kit-wet-viewhand.png"></img>
 </div>
