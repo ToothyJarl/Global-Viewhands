@@ -36,6 +36,14 @@ function Remove-Lines {
     }
 }
 
+function WriteTutorial {
+    Write-HostCenter ""
+    Write-HostCenter "Global Viewhands is successfully installed!"
+    Write-HostCenter "Launch H1-Mod, and load up the mod."
+    Write-HostCenter "The rest of the instructions are on the github page."
+    Write-HostCenter ""
+}
+
 function Install-GlobalViewhands {
     param(
         [string]$directory
@@ -54,32 +62,26 @@ function Install-GlobalViewhands {
 
     Write-StringColor (Write-HostCenter "Removing temporary files") "Red"
     Remove-Item $downloadPath
+
+    WriteTutorial
 }
 
 
 Add-Type -AssemblyName System.Windows.Forms
 
 function BrowseForFolder {
-    # Create a new OpenFileDialog
-    $folderDialog = New-Object System.Windows.Forms.OpenFileDialog
+    # Create a new FolderBrowserDialog
+    $folderDialog = New-Object System.Windows.Forms.FolderBrowserDialog
 
     # Set the dialog properties
-    $folderDialog.Title = "Select a folder"
-    $folderDialog.CheckFileExists = $false
-    $folderDialog.Multiselect = $false
-    $folderDialog.ValidateNames = $false
-    $folderDialog.FileName = "Folder Selection."
-    $folderDialog.Filter = "Folders|no_file.ext"
-
-    # Set the option to only allow selection of folders
-    $folderDialog.ShowHelp = $true
+    $folderDialog.Description = "Select a folder"
 
     # Show the dialog and store the result
     $dialogResult = $folderDialog.ShowDialog()
 
     # If the user clicked OK, return the selected folder path
     if ($dialogResult -eq [System.Windows.Forms.DialogResult]::OK) {
-        return [System.IO.Path]::GetDirectoryName($folderDialog.FileName)
+        return $folderDialog.SelectedPath
     }
 
     # If the user clicked Cancel or closed the dialog, return $null
@@ -201,7 +203,7 @@ if ($choice -eq "1") {
             Write-HostCenter "Please make sure to have installed it or verify its integrity."
         }
     } catch {
-        Write-HostCenter "Error during search, please restart the installer and try again!"
+        Write-HostCenter "An error occured, please restart the installer and try again!"
     }
 } else {
     Write-HostCenter "Invalid choice. Please enter either 1 or 2."
