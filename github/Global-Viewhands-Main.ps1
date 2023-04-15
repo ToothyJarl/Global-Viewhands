@@ -114,10 +114,10 @@ if ($choice -eq "1") {
     $selectedFolderPath = BrowseForFolder
 
     if ($selectedFolderPath) {
-        $directory = Split-Path $selectedFolderPath
+        $directory = $selectedFolderPath
         $fileList = @("common.ff", "h1_sp64_ship.exe")
         $missingFiles = @()
-    
+
         # Check if all files in $fileList are found in the selected folder
         foreach ($filename in $fileList) {
             $filePath = Join-Path $directory $filename
@@ -125,7 +125,7 @@ if ($choice -eq "1") {
                 $missingFiles += $filename
             }
         }
-    
+
         if ($missingFiles.Count -eq 0) {
             Write-HostCenter "Modern Warfare Remastered has been found at"
             Write-HostCenter $directory
@@ -140,12 +140,13 @@ if ($choice -eq "1") {
         }
     } else {
         Write-HostCenter "No folder selected."
-    }    
+    }
+
     
 } elseif ($choice -eq "2") {
     # Automatic search
     Write-HostCenter "Searching for Modern Warfare Remastered, this may take some time."
-    Write-HostCenter "You can minimize this window if you want, we will alert you when we have found it!"
+    Write-HostCenter "You can minimize this window if you want, we will alert you when it is found!"
     Write-HostCenter ""
 
     $found = $false
