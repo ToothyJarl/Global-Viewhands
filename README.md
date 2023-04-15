@@ -38,12 +38,12 @@
 
 ## Batch Installation
 
-1. Download [Global-Viewhands-Install.bat](https://github.com/ToothyJarl/Global-Viewhands/raw/main/Global-Viewhands-Install.bat
+1. Download [Global-Viewhands-Install.bat](https://downgit.github.io/#/home?url=https://github.com/ToothyJarl/Global-Viewhands/Global-Viewhands-Install.bat
 ) and run it to automatically install.
 
 ## Manual Installation
 
-1. Download [Global-Viewhands.zip](https://github.com/ToothyJarl/Global-Viewhands/raw/main/github/Global-Viewhands.zip).
+1. Download [Global-Viewhands.zip](https://downgit.github.io/#/home?url=https://github.com/ToothyJarl/Global-Viewhands/github/Global-Viewhands.zip).
 
 1. Create a folder in your MWR root directory called **mods** if it is not already there.
 
