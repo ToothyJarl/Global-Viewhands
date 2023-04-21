@@ -28,7 +28,6 @@
     -   Spetsnaz Wet
     -   OpFor
     -   OpFor Full Sleeve
-    -   Arctic
 
 # Installation
 
