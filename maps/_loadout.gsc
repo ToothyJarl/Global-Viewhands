@@ -17,7 +17,6 @@ give_loadout()
 
     var_0 = maps\_loadout_code::get_loadout();
 
-    thread maps\_globalViewhands::initViewhands();
     var_1 = getdvar( "globalViewhandsCurrent" );
 
     level.player maps\_loadout_code::setdefaultactionslot();

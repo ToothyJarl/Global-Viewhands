@@ -2,6 +2,8 @@
 -- ;  Written by ToothyJarl :: 4/12/2023
 -- ;
 
+local debug = 1
+
 local menus = {}
 local csv = "sp/level_info.csv"
 
@@ -19,7 +21,7 @@ local viewhands_list = [[
 {
     "options": [
         {
-            "value": "globalViewhands_usmc_marine",
+            "value": "globalViewhands_base_viewhands",
             "text": "Marines"
         },
         {
@@ -39,41 +41,36 @@ local viewhands_list = [[
             "text": "Ghillie"
         },
         {
-            "value": "globalViewhands_spetsnaz",
+            "value": "globalViewhands_h1_spetsnaz_urban_mp_camo",
             "text": "Spetsnaz"
         },
         {
-            "value": "globalViewhands_spetsnaz_wet",
+            "value": "globalViewhands_h1_spetsnaz_urban_mp_camo_wet",
             "text": "Spetsnaz Wet"
         },
         {
-            "value": "globalViewhands_opfor",
+            "value": "globalViewhands_h1_arab_desert_mp_camo",
             "text": "OpFor"
         },
         {
-            "value": "globalViewhands_opfor_full",
+            "value": "globalViewhands_h1_arab_desert_fullsleeves_mp_camo",
             "text": "OpFor Full Sleeve"
-        },
-        {
-            "value": "viewhands_arctic",
-            "text": "Arctic"
-        },
+        }
     ]
 }
 ]]
 
 local image_desc = {
-    ["globalViewhands_usmc_marine"] = "Usmc Marines Viewhands",
+    ["globalViewhands_base_viewhands"] = "USMC Marines Viewhands",
     ["globalViewhands_sas_woodland"] = "SAS Woodland Viewhands",
     ["globalViewhands_black_kit"] = "Black Kit Viewhands",
     ["globalViewhands_black_kit_wet"] = "Black Kit Wet Viewhands",
     ["globalViewhands_marine_sniper"] = "Ghillie Suit Viewhands",
-    ["globalViewhands_spetsnaz"] = "Spetsnaz Viewhands",
-    ["globalViewhands_spetsnaz_wet"] = "Spetsnaz Wet Viewhands",
-    ["globalViewhands_opfor"] = "OpFor Viewhands",
-    ["globalViewhands_opfor_full"] = "OpFor Full Sleeve Viewhands",
-    ["viewhands_arctic"] = "Arctic Viewhands"
-  }  
+    ["globalViewhands_h1_spetsnaz_urban_mp_camo"] = "Spetsnaz Viewhands",
+    ["globalViewhands_h1_spetsnaz_urban_mp_camo_wet"] = "Spetsnaz Wet Viewhands",
+    ["globalViewhands_h1_arab_desert_mp_camo"] = "OpFor Viewhands",
+    ["globalViewhands_h1_arab_desert_fullsleeves_mp_camo"] = "OpFor Full Sleeve Viewhands",
+}  
 
 local options = {}
 local parsed_json = json.decode(viewhands_list)
@@ -104,24 +101,17 @@ local imageDesc = ""
 
 function createmenu(team)
     local teammenu = function(a1)
-        
-        local InitInGameBkg = LUI.MenuTemplate.InitInGameBkg
-        LUI.MenuTemplate.InitInGameBkg = function() end
-    
+            
         local menu = LUI.MenuTemplate.new(a1, {
             menu_title = "VIEWHANDS",
             exclusiveController = 0,
-            menu_width = 450,
+            menu_width = 500,
             menu_top_indent = LUI.MenuTemplate.spMenuOffset,
             showTopRightSmallBar = true
         })
         
 
-                
-
     
-        LUI.MenuTemplate.InitInGameBkg = InitInGameBkg
-
 
         LUI.Options.CreateOptionButton( menu, "globalViewhandsMode", "Mode", "Change which mode you want to use", {
             {
@@ -192,7 +182,7 @@ function createmenu(team)
             imageDesc:registerAnimationState( "hidden", {
             alpha = 0
         } )
-        imageDesc:registerEventHandler( "menu_create", UpdateDifficultyText(imageDesc, nil, "Usmc Marines Viewhands") )
+        imageDesc:registerEventHandler( "menu_create", UpdateDifficultyText(imageDesc, nil, "USMC Marines Viewhands") )
         f30_arg0:addElement( imageDesc )
 
 
@@ -268,7 +258,15 @@ function createmenu(team)
                 alpha = 0.7,
                 zRot = 0
             }
+
             local self = LUI.UIImage.new( f30_local5 )
+
+            function updateImage(viewhand)
+                self:removeElement( self )
+                f30_local5.material = RegisterMaterial( "ui_global_viewhands_" .. viewhand )
+                self = LUI.UIImage.new( f30_local5 )
+            end
+
             f30_local5.zRot = -90
             self:registerAnimationState( "rot_90", f30_local5 )
             f30_local5.zRot = -180
@@ -347,13 +345,19 @@ function createmenu(team)
 
         for i = 0, count - 2 do
             local mapId = Engine.TableLookupByRow(csv, i, cols.mapId)
-            local mapString = Engine.TableLookupByRow(csv, i, cols.mapString)        
-        
-            LUI.Options.CreateOptionButton(menu, "globalViewhands_" .. mapId, mapString, "Set an individual viewhand for: ^2" .. Engine.Localize(mapString), options, nil, function() 
+            local mapString = Engine.TableLookupByRow(csv, i, cols.mapString)
+            local mapHighlighted = ""
+
+            if Engine.GetDvarString("mapname") == mapId and not Engine.InFrontend() then
+                mapHighlighted = "^2"
+            end
+            
+            LUI.Options.CreateOptionButton(menu, "globalViewhands_" .. mapId, mapHighlighted .. Engine.Localize(mapString), "Set an individual viewhand for: ^2" .. Engine.Localize(mapString), options, nil, function() 
                 return Engine.GetDvarString( "globalViewhandsMode" ) == "global"
             end, function(value)
                 UpdateDifficultyText(imageDesc, nil, image_desc[value])
                 Engine.SetDvarFromString("globalViewhandsUpdate", "1")
+                updateImage(value)
                 configFunctions.setMapViewhand(mapId, value)
                 configFunctions.loadConfigToDvars()
             end)

@@ -20,7 +20,7 @@ local viewhandsConfigPath = "players2/default/globalViewhandsConfig.json"
 
 local defaultViewhandsConfig = {
     mode = "global",
-    viewhand = "globalViewhands_usmc_marine",
+    viewhand = "globalViewhands_h1_sas_ct_mp_camo",
     maps = {
         {
             mapname = "killhouse", -- F.N.G
@@ -32,7 +32,7 @@ local defaultViewhandsConfig = {
         },
         {
             mapname = "coup", -- The Coup ( cutscene )
-            setViewhand = "globalViewhands_usmc_marine"
+            setViewhand = "globalViewhands_base_viewhands"
         },
         {
             mapname = "blackout", -- Blackout
@@ -40,11 +40,11 @@ local defaultViewhandsConfig = {
         },
         {
             mapname = "armada", -- Charlie Don't Surf
-            setViewhand = "globalViewhands_usmc_marine"
+            setViewhand = "globalViewhands_base_viewhands"
         },
         {
             mapname = "bog_a", -- The Bog
-            setViewhand = "globalViewhands_usmc_marine"
+            setViewhand = "globalViewhands_base_viewhands"
         },
         {
             mapname = "hunted", -- Hunted
@@ -52,19 +52,19 @@ local defaultViewhandsConfig = {
         },
         {
             mapname = "ac130", -- Hunted
-            setViewhand = "globalViewhands_usmc_marine"
+            setViewhand = "globalViewhands_base_viewhands"
         },
         {
             mapname = "bog_b", -- War Pig
-            setViewhand = "globalViewhands_usmc_marine"
+            setViewhand = "globalViewhands_base_viewhands"
         },
         {
             mapname = "airlift", -- Shock and Awe
-            setViewhand = "globalViewhands_usmc_marine"
+            setViewhand = "globalViewhands_base_viewhands"
         },
         {
             mapname = "aftermath", -- Aftermath ( cutscene )
-            setViewhand = "globalViewhands_usmc_marine"
+            setViewhand = "globalViewhands_base_viewhands"
         },
         {
             mapname = "village_assault", -- Safehouse
