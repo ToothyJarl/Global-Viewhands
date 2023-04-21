@@ -21,31 +21,31 @@ local viewhands_list = [[
 {
     "options": [
         {
-            "value": "globalViewhands_base_viewhands",
+            "value": "globalViewhands_h1_usmc_marine",
             "text": "Marines"
         },
         {
-            "value": "globalViewhands_sas_woodland",
+            "value": "globalViewhands_h1_sas_woodland",
             "text": "Woodland"
         },
         {
-            "value": "globalViewhands_black_kit",
+            "value": "globalViewhands_h1_sas_ct_mp_camo",
             "text": "Black Kit"
         },
         {
-            "value": "globalViewhands_black_kit_wet",
+            "value": "globalViewhands_h1_sas_ct_mp_wet_camo",
             "text": "Black Kit Wet"
         },
         {
-            "value": "globalViewhands_marine_sniper",
+            "value": "globalViewhands_h1_marine_sniper",
             "text": "Ghillie"
         },
         {
-            "value": "globalViewhands_h1_spetsnaz_urban_mp_camo",
+            "value": "globalViewhands_h1_op_force_ult",
             "text": "Spetsnaz"
         },
         {
-            "value": "globalViewhands_h1_spetsnaz_urban_mp_camo_wet",
+            "value": "globalViewhands_h1_spetsnaz_urban_mp_wet_camo",
             "text": "Spetsnaz Wet"
         },
         {
@@ -53,7 +53,7 @@ local viewhands_list = [[
             "text": "OpFor"
         },
         {
-            "value": "globalViewhands_h1_arab_desert_fullsleeves_mp_camo",
+            "value": "globalViewhands_h1_arab_desert_mp_fullsleeves_camo",
             "text": "OpFor Full Sleeve"
         }
     ]
@@ -61,15 +61,15 @@ local viewhands_list = [[
 ]]
 
 local image_desc = {
-    ["globalViewhands_base_viewhands"] = "USMC Marines Viewhands",
-    ["globalViewhands_sas_woodland"] = "SAS Woodland Viewhands",
-    ["globalViewhands_black_kit"] = "Black Kit Viewhands",
-    ["globalViewhands_black_kit_wet"] = "Black Kit Wet Viewhands",
-    ["globalViewhands_marine_sniper"] = "Ghillie Suit Viewhands",
-    ["globalViewhands_h1_spetsnaz_urban_mp_camo"] = "Spetsnaz Viewhands",
-    ["globalViewhands_h1_spetsnaz_urban_mp_camo_wet"] = "Spetsnaz Wet Viewhands",
+    ["globalViewhands_h1_usmc_marine"] = "USMC Marines Viewhands",
+    ["globalViewhands_h1_sas_woodland"] = "SAS Woodland Viewhands",
+    ["globalViewhands_h1_sas_ct_mp_camo"] = "Black Kit Viewhands",
+    ["globalViewhands_h1_sas_ct_mp_wet_camo"] = "Black Kit Wet Viewhands",
+    ["globalViewhands_h1_marine_sniper"] = "Ghillie Suit Viewhands",
+    ["globalViewhands_h1_op_force_ult"] = "Spetsnaz Viewhands",
+    ["globalViewhands_h1_spetsnaz_urban_mp_wet_camo"] = "Spetsnaz Wet Viewhands",
     ["globalViewhands_h1_arab_desert_mp_camo"] = "OpFor Viewhands",
-    ["globalViewhands_h1_arab_desert_fullsleeves_mp_camo"] = "OpFor Full Sleeve Viewhands",
+    ["globalViewhands_h1_arab_desert_mp_fullsleeves_camo"] = "OpFor Full Sleeve Viewhands",
 }  
 
 local options = {}
