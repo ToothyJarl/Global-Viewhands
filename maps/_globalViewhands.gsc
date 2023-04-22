@@ -4,6 +4,8 @@
 
 initViewhands()
 {
+    precacheViewhands();
+    
     for (;;)
     {
         if (getdvar( "globalViewhandsMode" ) == "global")
@@ -26,28 +28,15 @@ initViewhands()
     }
 }
 
-inGameCheck()
+precacheViewhands()
 {
-    IPrintLn("Success!");
-}
-
-checkViewhands()
-{
-    if (getdvar( "globalViewhandsMode" ) == "global")
-    {
-        IPrintLn("^2Global: " + getdvar( "globalViewhands_global" ));    
-        level.player setviewmodel(getdvar( "globalViewhands_global"));
-    } 
-    else if (getdvar( "globalViewhandsMode" ) == "individual")
-    {
-        if(getdvar( "globalViewhands_" +  getdvar("mapname")) != undefined)
-        {
-            IPrintLn("^2Individual: " + getdvar( "globalViewhands_" +  getdvar("mapname")));
-            level.player setviewmodel(getdvar( "globalViewhands_" +  getdvar("mapname")));
-        }
-        else
-        {
-            IPrintLn("^1No viewhand is set for this map. Please set it in the viewhands selector.");
-        }
-    }
+    precachemodel("globalViewhands_h1_usmc_marine");
+    precachemodel("globalViewhands_h1_sas_woodland");
+    precachemodel("globalViewhands_h1_sas_ct_mp_camo");
+    precachemodel("globalViewhands_h1_sas_ct_mp_wet_camo");
+    precachemodel("globalViewhands_h1_marine_sniper");
+    precachemodel("globalViewhands_h1_op_force_ult");
+    precachemodel("globalViewhands_h1_spetsnaz_urban_mp_wet_camo");
+    precachemodel("globalViewhands_h1_arab_desert_mp_camo");
+    precachemodel("globalViewhands_h1_arab_desert_mp_fullsleeves_camo");
 }

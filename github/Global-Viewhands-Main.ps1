@@ -38,8 +38,8 @@ function Remove-Lines {
 
 function WriteTutorial {
     Write-HostCenter ""
-    Write-HostCenter "Global Viewhands is successfully installed!"
-    Write-HostCenter "Launch H1-Mod, and load up the mod."
+    Write-HostCenter "Global Viewhands has successfully installed!"
+    Write-HostCenter "Launch H1-Mod, and go to Options > Viewhands."
     Write-HostCenter "The rest of the instructions are on the github page."
     Write-HostCenter ""
 }
@@ -56,10 +56,29 @@ function Install-GlobalViewhands {
     Invoke-WebRequest -Uri $zipUrl -OutFile $downloadPath
 
     Write-StringColor (Write-HostCenter "Extracting") "Red"
-    $extractionDirectory = Join-Path $directory "mods"
+    $extractionDirectory = Join-Path $directory "h1-mod"
     Add-Type -AssemblyName System.IO.Compression.FileSystem
-    [System.IO.Compression.ZipFile]::ExtractToDirectory($downloadPath, $extractionDirectory)
+    
+    $zipArchive = [System.IO.Compression.ZipFile]::OpenRead($downloadPath)
 
+    foreach ($entry in $zipArchive.Entries) {
+        $destinationPath = Join-Path $extractionDirectory $entry.FullName
+
+        $destinationDir = [System.IO.Path]::GetDirectoryName($destinationPath)
+        if (-not (Test-Path $destinationDir)) {
+            New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
+        }
+
+        $entryStream = $entry.Open()
+        $fileStream = [System.IO.File]::Create($destinationPath)
+        $entryStream.CopyTo($fileStream)
+        $fileStream.Close()
+        $entryStream.Close()
+    }
+
+    $zipArchive.Dispose()
+
+    
     Write-StringColor (Write-HostCenter "Removing temporary files") "Red"
     Remove-Item $downloadPath
 

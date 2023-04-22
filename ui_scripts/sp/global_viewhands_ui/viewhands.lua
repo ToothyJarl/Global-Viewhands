@@ -96,6 +96,10 @@ function UpdateDifficultyText( f32_arg0, f32_arg1, text )
     f32_arg0:setText( text )
 end
 
+function UpdateImage( f32_arg0, viewhand )
+    f32_arg0:setImage( RegisterMaterial( "ui_" .. viewhand ) )
+end
+
 
 local imageDesc = ""
 
@@ -123,7 +127,6 @@ function createmenu(team)
                 value = "global"
             }
         }, nil, nil, function (value)
-            Engine.SetDvarFromString("globalViewhandsUpdate", "1")
             modeViewhand = value
             configFunctions.setMode(value)
             menu:RefreshButtonDisabled()
@@ -254,27 +257,24 @@ function createmenu(team)
             local f30_local5 = {
                 width = f0_local7.Styles.Minimap.Width,
                 height = f0_local7.Styles.Minimap.Height,
-                material = RegisterMaterial( "marine" ),
-                alpha = 0.7,
+                material = RegisterMaterial( "ui_globalViewhands_h1_usmc_marine" ),
+                alpha = 1,
                 zRot = 0
             }
 
-            local self = LUI.UIImage.new( f30_local5 )
+            image_main = LUI.UIImage.new( f30_local5 )
 
-            function updateImage(viewhand)
-                self:removeElement( self )
-                f30_local5.material = RegisterMaterial( "ui_global_viewhands_" .. viewhand )
-                self = LUI.UIImage.new( f30_local5 )
-            end
+
+            
 
             f30_local5.zRot = -90
-            self:registerAnimationState( "rot_90", f30_local5 )
+            image_main:registerAnimationState( "rot_90", f30_local5 )
             f30_local5.zRot = -180
-            self:registerAnimationState( "rot_180", f30_local5 )
+            image_main:registerAnimationState( "rot_180", f30_local5 )
             f30_local5.zRot = -270
-            self:registerAnimationState( "rot_270", f30_local5 )
-            self:registerEventHandler( "menu_create" )
-            f30_local2:addElement( self )
+            image_main:registerAnimationState( "rot_270", f30_local5 )
+            image_main:registerEventHandler( "menu_create" )
+            f30_local2:addElement( image_main )
             local f30_local7 = {
                 width = f0_local7.Styles.Minimap.Width,
                 height = f0_local7.Styles.Minimap.Height,
@@ -329,10 +329,10 @@ function createmenu(team)
 
         createdivider(menu, "Global")
 
-        LUI.Options.CreateOptionButton(menu, "globalViewhands_global", "Viewhand", "Set a global viewhand for ^2all maps", options, nil, function () 
+        LUI.Options.CreateOptionButton(menu, "globalViewhands_global", "Viewhand", "Set a global viewhand for: ^2All Maps", options, nil, function () 
             return Engine.GetDvarString( "globalViewhandsMode" ) == "individual"
         end, function(value)
-            Engine.SetDvarFromString("globalViewhandsUpdate", "1")
+            UpdateImage(image_main, value)
             UpdateDifficultyText(imageDesc, nil, image_desc[value])
             globalViewhand = value
             configFunctions.setGlobalViewhand(value)
@@ -355,9 +355,8 @@ function createmenu(team)
             LUI.Options.CreateOptionButton(menu, "globalViewhands_" .. mapId, mapHighlighted .. Engine.Localize(mapString), "Set an individual viewhand for: ^2" .. Engine.Localize(mapString), options, nil, function() 
                 return Engine.GetDvarString( "globalViewhandsMode" ) == "global"
             end, function(value)
+                UpdateImage(image_main, value)
                 UpdateDifficultyText(imageDesc, nil, image_desc[value])
-                Engine.SetDvarFromString("globalViewhandsUpdate", "1")
-                updateImage(value)
                 configFunctions.setMapViewhand(mapId, value)
                 configFunctions.loadConfigToDvars()
             end)

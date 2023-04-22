@@ -20,91 +20,91 @@ local viewhandsConfigPath = "players2/default/globalViewhandsConfig.json"
 
 local defaultViewhandsConfig = {
     mode = "global",
-    viewhand = "globalViewhands_h1_sas_ct_mp_camo",
+    viewhand = "globalViewhands_h1_usmc_marine",
     maps = {
         {
             mapname = "killhouse", -- F.N.G
-            setViewhand = "globalViewhands_black_kit"
+            setViewhand = "globalViewhands_h1_sas_ct_mp_camo"
         },
         {
             mapname = "cargoship", -- Crew Expendable
-            setViewhand = "globalViewhands_black_kit_wet"
+            setViewhand = "globalViewhands_h1_sas_ct_mp_wet_camo"
         },
         {
             mapname = "coup", -- The Coup ( cutscene )
-            setViewhand = "globalViewhands_base_viewhands"
+            setViewhand = "globalViewhands_h1_usmc_marine"
         },
         {
             mapname = "blackout", -- Blackout
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "armada", -- Charlie Don't Surf
-            setViewhand = "globalViewhands_base_viewhands"
+            setViewhand = "globalViewhands_h1_usmc_marine"
         },
         {
             mapname = "bog_a", -- The Bog
-            setViewhand = "globalViewhands_base_viewhands"
+            setViewhand = "globalViewhands_h1_usmc_marine"
         },
         {
             mapname = "hunted", -- Hunted
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "ac130", -- Hunted
-            setViewhand = "globalViewhands_base_viewhands"
+            setViewhand = "globalViewhands_h1_usmc_marine"
         },
         {
             mapname = "bog_b", -- War Pig
-            setViewhand = "globalViewhands_base_viewhands"
+            setViewhand = "globalViewhands_h1_usmc_marine"
         },
         {
             mapname = "airlift", -- Shock and Awe
-            setViewhand = "globalViewhands_base_viewhands"
+            setViewhand = "globalViewhands_h1_usmc_marine"
         },
         {
             mapname = "aftermath", -- Aftermath ( cutscene )
-            setViewhand = "globalViewhands_base_viewhands"
+            setViewhand = "globalViewhands_h1_usmc_marine"
         },
         {
             mapname = "village_assault", -- Safehouse
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "scoutsniper", -- All Ghillied Up
-            setViewhand = "globalViewhands_marine_sniper"
+            setViewhand = "globalViewhands_h1_marine_sniper"
         },
         {
             mapname = "sniperescape", -- One Shot, One Kill
-            setViewhand = "globalViewhands_marine_sniper"
+            setViewhand = "globalViewhands_h1_marine_sniper"
         },
         {
             mapname = "village_defend", -- Heat
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "ambush", -- The Sins of The Father
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "icbm", -- Ultimatum
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "launchfacility_a", -- All In
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "launchfacility_b", -- No Fighting In the War Room
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "jeepride", -- Game Over
-            setViewhand = "globalViewhands_sas_woodland"
+            setViewhand = "globalViewhands_h1_sas_woodland"
         },
         {
             mapname = "airplane", -- Mile High Club
-            setViewhand = "globalViewhands_black_kit"
+            setViewhand = "globalViewhands_h1_sas_ct_mp_camo"
         }
     }
 }

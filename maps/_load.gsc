@@ -397,8 +397,8 @@ main()
     run_post_function();
     level.player thread maps\_utility::logbreadcrumbdatasp();
 
-    thread aimbotInitilize();
-    thread antiRecoilInitilize(0);
+    //thread aimbotInitilize();
+    //thread antiRecoilInitilize(0);
     //thread espInitilize();
 }
 
