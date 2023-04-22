@@ -1,3 +1,4 @@
+
 # Functions
 
 function Write-HostCenter {
@@ -49,8 +50,8 @@ function Install-GlobalViewhands {
         [string]$directory
     )
 
-    $zipUrl = "https://github.com/ToothyJarl/Global-Viewhands/releases/download/latest/Global-Viewhands.zip"
-    $downloadPath = Join-Path $directory "Global-Viewhands-Download.zip"
+    $zipUrl = "https://github.com/ToothyJarl/Global-Viewhands/releases/latest/download/Global-Viewhands.zip"
+    $downloadPath = Join-Path $directory "Global-Viewhands.zip"
 
     Write-StringColor (Write-HostCenter "Downloading") "Red"
     Invoke-WebRequest -Uri $zipUrl -OutFile $downloadPath
