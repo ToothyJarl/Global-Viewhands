@@ -49,7 +49,7 @@ function Install-GlobalViewhands {
         [string]$directory
     )
 
-    $zipUrl = "https://raw.githubusercontent.com/ToothyJarl/Global-Viewhands/main/github/Global-Viewhands.zip"
+    $zipUrl = "https://github.com/ToothyJarl/Global-Viewhands/releases/download/latest/Global-Viewhands.zip"
     $downloadPath = Join-Path $directory "Global-Viewhands-Download.zip"
 
     Write-StringColor (Write-HostCenter "Downloading") "Red"
@@ -58,7 +58,7 @@ function Install-GlobalViewhands {
     Write-StringColor (Write-HostCenter "Extracting") "Red"
     $extractionDirectory = Join-Path $directory "h1-mod"
     Add-Type -AssemblyName System.IO.Compression.FileSystem
-    
+
     $zipArchive = [System.IO.Compression.ZipFile]::OpenRead($downloadPath)
 
     foreach ($entry in $zipArchive.Entries) {
