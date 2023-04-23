@@ -62,7 +62,6 @@ Using Global Viewhands is extremely easy.
     <p style="font-size: 14px; color: gray;">Preview of a few viewhands</p>
     <br>
     <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/ghillie-viewhand.png"></img>
-    <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/arctic-viewhand.png"></img>
     <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/black-kit-wet-viewhand.png"></img>
     <br>
     <br>
