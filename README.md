@@ -43,9 +43,9 @@
 
 1. Download [Global-Viewhands.zip](https://downgit.github.io/#/home?url=https://github.com/ToothyJarl/Global-Viewhands/github/Global-Viewhands.zip).
 
-1. Create a folder in your MWR root directory called **mods** if it is not already there.
+1. Create a folder in your MWR root directory called **h1-mod** if it is not already there.
 
-2. Extract **Global-Viewhands.zip** into the **mods** folder.
+2. Extract **Global-Viewhands.zip** into the **h1-mod** folder.
 
 Restart your game, and you have successfully installed **Global-Viewhands**!
 
