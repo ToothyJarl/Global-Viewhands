@@ -7,7 +7,7 @@
     <br>
     <p>A mod for Modern Warfare Remastered that allows you to use any viewhand, anywhere.</p>
     <div style="font-size: 12px; color: gray;">
-        <p>NOT YET RELEASED</p>
+        <p>SINGLEPLAYER</p>
     </div>
 </div>
 
@@ -41,7 +41,7 @@
 
 ## Manual Installation
 
-1. Download [Global-Viewhands.zip](https://downgit.github.io/#/home?url=https://github.com/ToothyJarl/Global-Viewhands/github/Global-Viewhands.zip).
+1. Download [Global-Viewhands.zip](https://github.com/ToothyJarl/Global-Viewhands/releases/latest/download/Global-Viewhands.zip).
 
 1. Create a folder in your MWR root directory called **h1-mod** if it is not already there.
 
@@ -64,6 +64,7 @@ Using Global Viewhands is extremely easy.
     <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/ghillie-viewhand.png"></img>
     <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/arctic-viewhand.png"></img>
     <img style=" display: block; margin-left: auto; margin-right: auto; margin-bottom:20px;" width="70%" src="github/black-kit-wet-viewhand.png"></img>
+    <br>
     <br>
     Mod by ToothyJarl & Shadow
 </div>
