@@ -1,3 +1,4 @@
+$ErrorActionPreference = "SilentlyContinue"
 
 # Functions
 
@@ -70,8 +71,12 @@ function Install-GlobalViewhands {
             New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
         }
 
+        if (-not (Test-Path $destinationPath)) {
+            [System.IO.File]::Create($destinationPath).Close()
+        }
+
         $entryStream = $entry.Open()
-        $fileStream = [System.IO.File]::Create($destinationPath)
+        $fileStream = [System.IO.File]::Open($destinationPath, 'OpenOrCreate')
         $entryStream.CopyTo($fileStream)
         $fileStream.Close()
         $entryStream.Close()
@@ -87,26 +92,31 @@ function Install-GlobalViewhands {
 }
 
 
+
 Add-Type -AssemblyName System.Windows.Forms
 
 function BrowseForFolder {
-    # Create a new FolderBrowserDialog
-    $folderDialog = New-Object System.Windows.Forms.FolderBrowserDialog
+    # Create a new OpenFileDialog
+    $fileDialog = New-Object System.Windows.Forms.OpenFileDialog
 
     # Set the dialog properties
-    $folderDialog.Description = "Select a folder"
+    $fileDialog.Title = "Select a folder"
+    $fileDialog.CheckFileExists = $false
+    $fileDialog.FileName = "Folder Selection."
+    $fileDialog.Filter = "Folders|no_file.extension"
 
     # Show the dialog and store the result
-    $dialogResult = $folderDialog.ShowDialog()
+    $dialogResult = $fileDialog.ShowDialog()
 
     # If the user clicked OK, return the selected folder path
     if ($dialogResult -eq [System.Windows.Forms.DialogResult]::OK) {
-        return $folderDialog.SelectedPath
+        return Split-Path $fileDialog.FileName
     }
 
     # If the user clicked Cancel or closed the dialog, return $null
     return $null
 }
+
 
 
 
@@ -171,8 +181,6 @@ if ($choice -eq "1") {
 
     $found = $false
     $fileList = @("common.ff")
-
-    try {
         $drives = Get-PSDrive -PSProvider FileSystem
         foreach ($drive in $drives) {
             $searchPath = $drive.Root
@@ -223,9 +231,6 @@ if ($choice -eq "1") {
             Write-HostCenter "No Modern Warfare Remastered directory was found."
             Write-HostCenter "Please make sure to have installed it or verify its integrity."
         }
-    } catch {
-        Write-HostCenter "An error occured, please restart the installer and try again!"
-    }
 } else {
     Write-HostCenter "Invalid choice. Please enter either 1 or 2."
 }
